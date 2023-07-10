@@ -25,7 +25,7 @@ def search_verses():
                 print(f"Chapter: {row[1]}")
                 print(f"Verse: {row[2]}")
                 print(f"God: {row[3]}")
-                print(f"Man: {[row[4]}")
+                print(f"Man: {row[4]}")
                 print(f"Relationship: {row[5]}\n")
                 
 #This creates a function called main, which serves as the entry point of the program and provides the main menu functionality. 
