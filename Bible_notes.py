@@ -1,5 +1,6 @@
 import csv
 
+#This creates a function named add_verse, which takes the user input and saves it into the created file, Bible_notes.csv.
 def add_verse():
     book = input("Enter the book name: ")
     chapter = input("Enter the chapter number: ")
@@ -12,7 +13,8 @@ def add_verse():
         writer = csv.writer(csvfile)
         writer.writerow([book, chapter, verse, God, man, relationship])
     print("Verse added successfully!\n")
-    
+
+#This creates a function search_verses which looks into the saved verses for a specified topic.
 def search_verses():
     topic = input("Enter a topic (God, man, or relationship): ")
     with open("Bible_notes.csv", "r") as csvfile:
@@ -23,9 +25,10 @@ def search_verses():
                 print(f"Chapter: {row[1]}")
                 print(f"Verse: {row[2]}")
                 print(f"God: {row[3]}")
-                print(f"Man: [row[4]}")
+                print(f"Man: {[row[4]}")
                 print(f"Relationship: {row[5]}\n")
                 
+#This creates a function called main, which serves as the entry point of the program and provides the main menu functionality. 
 def main():
     print("Welcome to Bible Notes App!")
     
@@ -45,5 +48,5 @@ def main():
         else:
             print("Invalid choice. Please try again")
             
-if __name__ == "__main":
+if __name__ == "__main__":
     main()
